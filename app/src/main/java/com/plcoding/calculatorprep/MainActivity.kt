@@ -63,8 +63,8 @@ class MainActivity : ComponentActivity() {
                                 symbol = "AC",
                                 color = LightGray,
                                 modifier = Modifier
-                                    .aspectRatio(2f)
-                                    .weight(2f),
+                                    .aspectRatio(1f)
+                                    .weight(1f),
                                 onClick = {
                                     viewModel.onAction(CalculatorAction.Clear)
                                 }
@@ -77,6 +77,16 @@ class MainActivity : ComponentActivity() {
                                     .weight(1f),
                                 onClick = {
                                     viewModel.onAction(CalculatorAction.Delete)
+                                }
+                            )
+                            CalculatorButton(
+                                symbol = "%",
+                                color = Orange,
+                                modifier = Modifier
+                                    .aspectRatio(1f)
+                                    .weight(1f),
+                                onClick = {
+                                    viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.Modulo))
                                 }
                             )
                             CalculatorButton(
